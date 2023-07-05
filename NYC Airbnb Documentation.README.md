@@ -65,7 +65,7 @@ reviews = pd.read_csv("C:/Users/LORA/Documents/Project NYC Airbnb Data Analysis/
 # Print the first five rows of each DataFrame
 print(prices.head(), "\n", room_types.head(), "\n", reviews.head())
 ```
-Explanation:
+## Explanation:
 
 Importing necessary libraries: pandas, numpy, and datetime. These libraries are commonly used for data manipulation, numerical operations, and date/time handling in Python.
 
@@ -81,7 +81,7 @@ Finally, the code prints the first five rows of each DataFrame (prices, room_typ
 
 Note: The file paths used in the pd.read_csv() and pd.ExcelFile() functions contain absolute paths, which may cause issues when the code is run on different machines. It's recommended to use relative paths or other methods to handle file locations more robustly.
 
-Output:
+## Output:
 
 ![import data 1](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/1837f23e-7d79-4d4b-aa19-63455a4ea01f)
 
@@ -96,7 +96,7 @@ prices["price"] = pd.to_numeric(prices["price"])
 # Print descriptive statistics for the price column
 print(prices["price"].describe())
 ```
-Explanation:
+## Explanation:
 
 Performing data cleaning and data type conversion operations on the "price" column of the prices DataFrame.
 
@@ -108,12 +108,12 @@ print(prices["price"].describe()): This line of code prints the descriptive stat
 
 By printing the descriptive statistics, you can quickly get an overview of the basic distribution and central tendency of the "price" column, such as the average price, the spread of prices, and the range of values.
 
-Output:
+## Output:
 
 ![2](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/9764e499-00bb-4caf-9329-0121ac6bbe9b)
 
 
-5. Data Analysis and Results:
+5. ## Data Analysis and Results:
 
 The analysis includes calculating various summary statistics, grouping data, and answering the key questions.
 
@@ -182,7 +182,9 @@ print("Airbnb monthly costs are ${}, while in the private market you would pay {
 ![4](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/15071464-a280-4b75-aaa3-a959339fca8f)
 
 
-Room Type Frequency: The number of advertisements for private rooms is determined by calculating the frequency of each room type in the "room_types" DataFrame.
+## Room Type Frequency: 
+
+The number of advertisements for private rooms is determined by calculating the frequency of each room type in the "room_types" DataFrame.
 
 ```python
 # Convert the room_type column to lowercase
@@ -197,7 +199,7 @@ room_frequencies = room_types["room_type"].value_counts()
 # Print room_frequencies
 print(room_frequencies)
 ```
-Explanation:
+## Explanation:
 
 Preparing the "room_type" data for analysis by converting it to lowercase, changing the data type to a categorical variable, and calculating the frequency of each room type.
 
@@ -209,7 +211,7 @@ room_frequencies = room_types["room_type"].value_counts(): This line calculates 
 
 print(room_frequencies): Finally, this line prints the frequencies of each room type in the room_types DataFrame. The output will display the room type categories along with the corresponding count of occurrences for each category.
 
-Output:
+## Output:
 
 ![5](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/17ea65c2-68f4-44a0-8e43-a654f6e828e1)
 
