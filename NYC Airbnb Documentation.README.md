@@ -1,5 +1,8 @@
 # Project Documentation: NYC Airbnb Data Analysis
 
+![Picture1](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/586c9410-8612-4937-8d18-bb785eb233c1)
+
+
 New York City (NYC), one of the most-visited cities in the world. As a result, there are many [Airbnb](https://www.airbnb.com/) listings to meet the high demand for temporary lodging for anywhere between a few nights to many months.
 
 1. ## Introduction:
@@ -228,9 +231,9 @@ last_reviewed = reviews["last_review"].dt.date.max()
 # Print the oldest and newest reviews from the DataFrame
 print("The earliest Airbnb review is {}, the latest review is {}".format(first_reviewed, last_reviewed))
 ```
-Explanation:
+## Explanation:
 
-In this section of the code, you are preparing the "last_review" data for analysis by converting it to datetime format and then finding the earliest and latest review dates.
+Preparing the "last_review" data for analysis by converting it to datetime format and then finding the earliest and latest review dates.
 
 reviews["last_review"] = pd.to_datetime(reviews["last_review"]): This line converts the "last_review" column in the reviews DataFrame to datetime format. The pd.to_datetime() function is used to parse the dates in the column and convert them to the datetime data type. This allows for easier manipulation and comparison of dates.
 
@@ -257,7 +260,7 @@ airbnb_merged.dropna(inplace=True)
 # Check if there are any duplicate values
 print("There are {} duplicates in the DataFrame.".format(airbnb_merged.duplicated().sum()))
 ```
-Explanation:
+## Explanation:
 
 merging multiple DataFrames to combine the relevant information and create a consolidated DataFrame for further analysis.
 
@@ -269,7 +272,7 @@ airbnb_merged.dropna(inplace=True): This line drops any rows containing missing 
 
 print("There are {} duplicates in the DataFrame.".format(airbnb_merged.duplicated().sum())): Finally, this line checks if there are any duplicate rows in the airbnb_merged DataFrame. The .duplicated() method identifies duplicate rows, and the .sum() method counts the total number of duplicates. The output message will display the count of duplicate rows in the DataFrame.
 
-Output:
+## Output:
 
 ![7](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/339f530d-fae4-4dd0-bba6-7d9fc451250c)
 
@@ -290,7 +293,7 @@ boroughs = boroughs.round(2).sort_values("mean", ascending=False)
 # Print boroughs
 print(boroughs)
 ```
-Explanation:
+## Explanation:
 
 Performing grouping and aggregation, and then printing the summary statistics based on the extracted information.
 
@@ -302,12 +305,14 @@ boroughs = boroughs.round(2).sort_values("mean", ascending=False): This line rou
 
 print(boroughs): Finally, this line prints the boroughs DataFrame, which contains the summary statistics for each borough. The output will display the borough names, along with the corresponding sum, mean, median, and count values for the "price" column.
 
-Output:
+## Output:
 
 ![8](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/27c56d5f-57be-46c2-b7a9-009109a1adbe)
 
 
-Price Range Labels: The "price" column in the "airbnb_merged" DataFrame is segmented into four price range labels ("Budget," "Average," "Expensive," and "Extravagant"). The occurrence frequencies of each label in each borough are calculated and printed.
+## Price Range Labels: 
+
+The "price" column in the "airbnb_merged" DataFrame is segmented into four price range labels ("Budget," "Average," "Expensive," and "Extravagant"). The occurrence frequencies of each label in each borough are calculated and printed.
 
 ```python
 # Create labels for the price range, label_names
@@ -323,7 +328,7 @@ airbnb_merged["price_range"] = pd.cut(airbnb_merged["price"], bins=ranges, label
 prices_by_borough = airbnb_merged.groupby(["borough", "price_range"])["price_range"].count()
 print(prices_by_borough)
 ```
-Explanation:
+## Explanation:
 
 creating price ranges and assigning labels to each range for the "price" column in the airbnb_merged DataFrame. Then, you calculate the occurrence frequencies for each label within each borough.
 
@@ -337,15 +342,15 @@ prices_by_borough = airbnb_merged.groupby(["borough", "price_range"])["price_ran
 
 print(prices_by_borough): Finally, this line prints the prices_by_borough Series, displaying the occurrence frequencies for each label within each borough. The output will show how many listings fall into each price range for each borough.
 
-Output:
+## Output:
 
 ![9](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/109f5859-6c4e-4a09-b0d7-257e9a450235)
 
 
-6. Conclusion:
+6. ## Conclusion:
 
 The NYC Airbnb Data Analysis project provides valuable insights into the pricing trends, room types, and borough-wise comparisons for Airbnb listings in New York City. The analysis offers essential information for both hosts and travelers to make informed decisions when engaging with the Airbnb platform in NYC.
 
-7. Future Scope:
+7. ## Future Scope:
 
 The project can be extended to include more sophisticated data visualization, predictive modeling, and further exploration of external datasets related to tourist attractions, transportation, or seasonal trends. Additionally, creating interactive visualizations and an accessible dashboard would enhance the usability and presentation of the analysis.
