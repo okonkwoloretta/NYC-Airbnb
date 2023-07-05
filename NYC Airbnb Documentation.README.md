@@ -21,8 +21,11 @@ c) *datasets/airbnb_last_review.tsv*: A tab-separated values (tsv) file containi
 The main goals of the analysis are to:
 
 Find the average price per night for an Airbnb listing in NYC.
+
 Compare the average monthly price of an Airbnb listing with the private rental market.
+
 Determine the number of advertisements for private rooms.
+
 Analyze Airbnb listing prices across the five boroughs of NYC.
 
 4. ## Data Processing and Cleaning:
@@ -114,7 +117,9 @@ Output:
 
 The analysis includes calculating various summary statistics, grouping data, and answering the key questions.
 
-Average Price per Night: The project calculates the average price per night for an Airbnb listing in NYC using the "prices" DataFrame and prints the result.
+## Average Price per Night: 
+
+The project calculates the average price per night for an Airbnb listing in NYC using the "prices" DataFrame and prints the result.
 
 ```python
 
@@ -131,7 +136,7 @@ avg_price = round(prices["price"].mean(), 2)
 print("The average price per night for an Airbnb listing in NYC is ${}.".format(avg_price))
 
 ```
-Explanation:
+## Explanation:
 
 handling listings with a price of $0 and calculating the average price for the remaining Airbnb listings in NYC.
 
@@ -143,12 +148,14 @@ round(prices["price"].mean(), 2): After removing the free listings, this line ca
 
 print("The average price per night for an Airbnb listing in NYC is ${}.".format(avg_price)): This line prints the average price calculated in the previous step. The average price is inserted into the string using the .format() method and displayed as part of the output message.
 
-Output:
+## Output:
 
 ![3](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/cda84470-9480-43b6-acf8-10586945f5b0)
 
 
-Monthly Price Comparison: The average monthly price of an Airbnb listing is computed by multiplying the daily price by 365 and dividing by 12. The comparison with the private rental market reveals the average Airbnb monthly cost and the corresponding private market cost.
+## Monthly Price Comparison: 
+
+The average monthly price of an Airbnb listing is computed by multiplying the daily price by 365 and dividing by 12. The comparison with the private rental market reveals the average Airbnb monthly cost and the corresponding private market cost.
 
 ```python
 # Add a new column to the prices DataFrame, price_per_month
@@ -160,7 +167,7 @@ average_price_per_month = round(prices["price_per_month"].mean(), 2)
 # Compare Airbnb and rental market
 print("Airbnb monthly costs are ${}, while in the private market you would pay {}.".format(average_price_per_month, "$3,100.00"))
 ```
-Explanation:
+## Explanation:
 
 Performing calculations related to the monthly cost of Airbnb listings and comparing it to the private rental market.
 
@@ -170,7 +177,7 @@ average_price_per_month = round(prices["price_per_month"].mean(), 2): After addi
 
 print("Airbnb monthly costs are ${}, while in the private market you would pay {}.".format(average_price_per_month, "$3,100.00")): This line prints a comparison between the average monthly cost of an Airbnb listing in NYC and a hypothetical cost in the private rental market. The output message shows the average monthly cost for Airbnb listings and the assumed cost in the private market (represented as "$3,100.00"). The values are inserted into the string using the .format() method.
 
-Output:
+## Output:
 
 ![4](https://github.com/okonkwoloretta/NYC-Airbnb/assets/116097143/15071464-a280-4b75-aaa3-a959339fca8f)
 
