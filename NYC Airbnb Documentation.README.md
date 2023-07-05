@@ -1,22 +1,22 @@
-Project Documentation: NYC Airbnb Data Analysis
+# Project Documentation: NYC Airbnb Data Analysis
 
 New York City (NYC), one of the most-visited cities in the world. As a result, there are many [Airbnb](https://www.airbnb.com/) listings to meet the high demand for temporary lodging for anywhere between a few nights to many months.
 
-1. Introduction:
+1. ## Introduction:
 
 The NYC Airbnb Data Analysis project focuses on exploring and analyzing three datasets related to Airbnb listings in New York City. The main objectives are to convert untidy data into appropriate formats and provide insights by answering key questions related to pricing, room types, and borough-based comparisons.
 
-2. Data Sources:
+2. ## Data Sources:
 
 The project utilizes three datasets:
 
-a) "datasets/airbnb_price.csv": Contains information about pricing details for Airbnb listings in NYC, including listing ID, room type, neighborhood, price, minimum nights, and availability.
+a) *datasets/airbnb_price.csv*: Contains information about pricing details for Airbnb listings in NYC, including listing ID, room type, neighborhood, price, minimum nights, and availability.
 
-b) "datasets/airbnb_room_type.xlsx": An Excel file with data about different room types offered by Airbnb hosts in NYC.
+b) *datasets/airbnb_room_type.xlsx*: An Excel file with data about different room types offered by Airbnb hosts in NYC.
 
-c) "datasets/airbnb_last_review.tsv": A tab-separated values (tsv) file containing details about the last review received by each Airbnb listing in NYC.
+c) *datasets/airbnb_last_review.tsv*: A tab-separated values (tsv) file containing details about the last review received by each Airbnb listing in NYC.
 
-3. Data Analysis Goals:
+3. ##  Data Analysis Goals:
 
 The main goals of the analysis are to:
 
@@ -25,15 +25,20 @@ Compare the average monthly price of an Airbnb listing with the private rental m
 Determine the number of advertisements for private rooms.
 Analyze Airbnb listing prices across the five boroughs of NYC.
 
-4. Data Processing and Cleaning:
+4. ## Data Processing and Cleaning:
 
 The project performs various data processing tasks to prepare the datasets for analysis. Key data processing steps include:
 
 Loading the datasets using Pandas' read_csv() and ExcelFile() functions for CSV and Excel files, respectively.
+
 Parsing the first sheet from the Excel file using xls.parse(0).
+
 Converting the "price" column in the "prices" DataFrame to a numeric data type by removing non-numeric characters and converting it using pd.to_numeric().
+
 Handling missing values by dropping them from the "airbnb_merged" DataFrame using dropna().
+
 Converting the "room_type" column in the "room_types" DataFrame to lowercase and changing its data type to "category" using str.lower() and astype() methods, respectively.
+
 Converting the "last_review" column in the "reviews" DataFrame to a datetime data type using pd.to_datetime().
 
 ``` python
@@ -59,7 +64,7 @@ print(prices.head(), "\n", room_types.head(), "\n", reviews.head())
 ```
 Explanation:
 
-The code starts by importing necessary libraries: pandas, numpy, and datetime. These libraries are commonly used for data manipulation, numerical operations, and date/time handling in Python.
+Importing necessary libraries: pandas, numpy, and datetime. These libraries are commonly used for data manipulation, numerical operations, and date/time handling in Python.
 
 The pd.read_csv() function is used to read the "airbnb_price.csv" file, which contains Airbnb listing prices, and load it into a pandas DataFrame called prices.
 
