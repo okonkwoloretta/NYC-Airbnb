@@ -5,9 +5,13 @@
 This project focuses on analyzing Airbnb data in New York City (NYC) to gain insights into pricing, room types, and reviews. The project involves working with three datasets: "airbnb_price.csv," "airbnb_room_type.xlsx," and "airbnb_last_review.tsv." The main goal is to convert the untidy data into appropriate formats for analysis and answer key questions related to pricing, room types, and borough comparisons.
 
 ## Key Questions
+
 What is the average price, per night, of an Airbnb listing in NYC?
+
 How does the average price of an Airbnb listing, per month, compare to the private rental market?
+
 How many adverts are for private rooms?
+
 How do Airbnb listing prices compare across the five NYC boroughs?
 
 ## Technologies Used
@@ -15,10 +19,13 @@ How do Airbnb listing prices compare across the five NYC boroughs?
 The following libraries were used for data manipulation and analysis:
 
 Pandas: for data manipulation and analysis
+
 NumPy: for numerical operations
+
 DateTime: for date and time handling
 
 ## Code  and Output
+
 The code provided in this project performs various tasks, including data loading, cleaning, merging, and analysis. Here are some highlights of the code:
 
 Loading the datasets into pandas DataFrames.
