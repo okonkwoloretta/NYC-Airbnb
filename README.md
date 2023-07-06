@@ -39,7 +39,7 @@ Creating price ranges and assigning labels to categorize the listings.
 
 Calculating occurrence frequencies for each label within each borough.
 
-The [DOCUMENTATION]() provides a summary of the steps involved in the code, explanations of each section, and its corresponding output. For a detailed understanding of the code and analysis, please refer to the [code snippets]() and explanations provided in this documentation.
+The [DOCUMENTATION](https://github.com/okonkwoloretta/NYC-Airbnb/blob/main/NYC%20Airbnb%20Documentation.README.md) provides a summary of the steps involved in the code, explanations of each section, and its corresponding output. For a detailed understanding of the code and analysis, please refer to the [code snippets](https://github.com/okonkwoloretta/NYC-Airbnb/blob/main/NYC%20Airbnb%20Data%20Analysis.ipynb) and explanations provided in this documentation.
 
 Feel free to explore the code further and customize it according to your specific requirements.
 
